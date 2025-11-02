@@ -76,7 +76,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <div className="w-56 h-56 rounded-full overflow-hidden shadow-2xl ring-4 ring-indigo-600 dark:ring-indigo-400 transform transition-all duration-300 hover:scale-105">
-            <img src="/src/Image/ProfileF.png" alt="Your profile picture" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            <img src="../Image/ProfileF.png" alt="Your profile picture" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
           </div>
         </motion.div>
       </div>
