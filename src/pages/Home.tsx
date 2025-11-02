@@ -77,7 +77,12 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <div className="w-56 h-56 rounded-full overflow-hidden shadow-2xl ring-4 ring-indigo-600 dark:ring-indigo-400 transform transition-all duration-300 hover:scale-105">
-            <img src={ProfilePic} alt="Your profile picture" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            <picture>
+              {/* Prefer AVIF, then WebP, fall back to original PNG import */}
+              <source srcSet="/src/Image/ProfileF-800.avif" type="image/avif" />
+              <source srcSet="/src/Image/ProfileF-800.webp 800w, /src/Image/ProfileF-400.webp 400w" type="image/webp" />
+              <img src={ProfilePic} alt="Your profile picture" className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+            </picture>
           </div>
         </motion.div>
       </div>
